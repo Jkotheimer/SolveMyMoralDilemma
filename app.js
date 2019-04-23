@@ -162,7 +162,7 @@ function Complete() {
     submit.innerHTML = "Start again";
     submit.addEventListener("click", reset);
     var answer = document.getElementById("answer");
-    document.getElementsByTagName("header").innerHTML = "You Moral Dilemma Has Been Solved!";
+    document.getElementsByTagName("header")[0].innerHTML = "You Moral Dilemma Has Been Solved!";
     answer.style.display = "block";
     document.getElementById("info").style.visibility = "visible";
     if(finalPositive1 > finalPositive2) {
