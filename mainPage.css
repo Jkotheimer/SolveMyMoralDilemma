@@ -1,0 +1,98 @@
+body {
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 50px;
+}
+header {
+    font-size: 40px;
+    margin: 10px;
+}
+#content {
+    position: relative;
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    padding: 30px;
+    font-size: 20px;
+}
+input {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    width: 400px;
+}:focus {
+    outline: none;
+}
+#incomplete {
+    display: none;
+    color: yellow;
+}
+button {
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid red;
+    background-color: white;
+    color: red;
+    font-size: 22px;
+    margin: 20px 5px;
+    transform: translateX(290px);
+    transition: .25s ease-in;
+}
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px red;
+}
+button:active {
+    transition: .15s;
+    background-color: #ddd;
+    box-shadow: none;
+}
+.ao {
+    transform: translateX(235px);
+    font-size: 16px;
+    padding: 5px;
+    border: none;
+    color: black;
+}
+.ao:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px black;
+}
+.subtitle {
+    margin-top: 5px;
+    font-size: 12px;
+    transform: translateX(220px);
+}
+.num {
+    width: 40px;
+}
+.sel {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+.del {
+    transform: none;
+    font-size: 14px;
+    background-color: transparent;
+    font-weight: bold;
+    color: #444;
+    border: none;
+}
+.del:hover {
+    box-shadow: none;
+    color: black;
+}
+.del:active {
+    background-color: transparent;
+    color: #222;
+}
+#answer {
+    display: none;
+    font-size: 30px;
+}

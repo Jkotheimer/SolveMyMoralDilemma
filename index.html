@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PHIL 181 Creative Project</title>
+    <link rel="shortcut icon" href="./philosophy.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./mainPage.css">
+</head>
+<body>
+    <header>Solve Your Moral Dilemma</header>
+    <div id="content">
+        <div id="initial">
+            Should I <input id="first_input" type="text"><br>
+            Or should I <input id="second_input" type="text">
+            <div id="incomplete">You must fill out all input fields</div>
+        </div>
+        
+        <div id="secondary" style="display: none;">
+            <div style="text-decoration: underline;">
+                What are the potential outcomes if I <span id="get_first"></span>?
+            </div>
+            <div id="first_outcomes">
+                <div class="subtitle">How positive/negative would <br>you rate this outcome? (0-100)</div>
+                <span id="init1">
+                    <input type="text" placeholder="Potential outcome here"> 
+                    <input data-num1=true class="num" type="number" max=100 min=0 placeholder=50 
+                        onkeyup="checkBounds(event, document.getElementById('initSel1'))"> 
+                    <select id="initSel1" data-sel1=true class="sel">
+                        <option value="pos">Positive</option>
+                        <option value="neg">Negative</option>
+                    </select>
+                </span>
+            </div>
+            <button class="ao" onclick="addOutcome(1)">Add Outcome</button>
+            <br>
+            
+            <div style="text-decoration: underline;">
+                What are the potential outcomes if I <span id="get_second"></span>?
+            </div>
+            <div id="second_outcomes">
+                <div class="subtitle">How positive/negative would <br>you rate this outcome? (0-100)</div>
+                <span id="init2">
+                    <input type="text" placeholder="Potential outcome here"> 
+                    <input data-num2=true class="num" type="number" max=100 min=0 placeholder=50 
+                        onkeyup="checkBounds(event, document.getElementById('initSel2'))"> 
+                    <select id="initSel2" data-sel2=true class="sel">
+                        <option value="pos">Positive</option>
+                        <option value="neg">Negative</option>
+                    </select>
+                </span>
+            </div>
+            <button class="ao" onclick="addOutcome(2)">Add Outcome</button>
+        </div>
+        <div id="answer"></div>
+    </div>
+    <button onclick="Back()" id="back" style="visibility: hidden;">Back</button>
+    <button onclick="Continue()" id="submit">Continue</button>
+    <script src="./app.js"></script>
+</body>
